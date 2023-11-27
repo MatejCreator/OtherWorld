@@ -5,20 +5,12 @@
 #include <ctype.h>
 #include <time.h>
 
-void screen_clean();
-void screen_clean()
-{
-    printf("\033[2J\033[1;1H");
-
-}
 
 int main() 
 {
-    int user;
-    printf("before");
-    scanf("%d", &user);
+    FILE* ptr = fopen("file.txt", "r");
 
-    screen_clean();
-
-    printf("after");
+    
+    fclose(ptr);
+    return 0;
 }
